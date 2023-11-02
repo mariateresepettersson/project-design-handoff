@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { useTranslation } from "react-i18next";
 
 function SignupForm() {
+  const { t, i18n } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,7 +27,7 @@ function SignupForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>Name</label>
+        <label>{t("homePage.formSection.firstName")}</label>
         <input
           type="text"
           name="name"
@@ -34,7 +36,16 @@ function SignupForm() {
         />
       </div>
       <div>
-        <label>Email</label>
+        <label>{t("homePage.formSection.lastName")}</label>
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label>{t("homePage.formSection.email")}</label>
         <input
           type="email"
           name="email"
@@ -42,16 +53,7 @@ function SignupForm() {
           onChange={handleChange}
         />
       </div>
-      <div>
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-        />
-      </div>
-      <button type="submit">Sign Up</button>
+      <button type="submit">{t("homePage.formSection.button")}</button>
     </form>
   );
 }
