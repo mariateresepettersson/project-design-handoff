@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 function SignupForm() {
   const { t, i18n } = useTranslation();
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '', // Rename "name" to "firstName"
+    lastName: '', // Add a "lastName" field
     email: '',
     password: '',
   });
@@ -19,7 +20,8 @@ function SignupForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Name:', formData.name);
+    console.log('First Name:', formData.firstName);
+    console.log('Last Name:', formData.lastName);
     console.log('Email:', formData.email);
     console.log('Password:', formData.password);
   };
@@ -27,25 +29,25 @@ function SignupForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>{t("homePage.formSection.firstName")}</label>
+        <label>{t('homePage.formSection.firstName')}</label>
         <input
           type="text"
-          name="name"
-          value={formData.name}
+          name="firstName" // Change the name attribute to "firstName"
+          value={formData.firstName}
           onChange={handleChange}
         />
       </div>
       <div>
-        <label>{t("homePage.formSection.lastName")}</label>
+        <label>{t('homePage.formSection.lastName')}</label>
         <input
           type="text"
-          name="name"
-          value={formData.name}
+          name="lastName" // Add a unique name attribute "lastName"
+          value={formData.lastName} // Use formData.lastName
           onChange={handleChange}
         />
       </div>
       <div>
-        <label>{t("homePage.formSection.email")}</label>
+        <label>{t('homePage.formSection.email')}</label>
         <input
           type="email"
           name="email"
@@ -53,7 +55,7 @@ function SignupForm() {
           onChange={handleChange}
         />
       </div>
-      <button type="submit">{t("homePage.formSection.button")}</button>
+      <button type="submit">{t('homePage.formSection.button')}</button>
     </form>
   );
 }
