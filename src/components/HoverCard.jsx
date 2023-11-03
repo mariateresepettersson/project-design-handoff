@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+{/*import { useTranslation } from 'react-i18next';
 import { Heading } from "./typography/Heading";
 import { Paragraph } from "./typography/Paragraph";
 
@@ -14,4 +14,4 @@ const HoverCard = ({ paragraph }) => {
     );
 }
 
-export default HoverCard;
+export default HoverCard;*/}
