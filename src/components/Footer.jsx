@@ -18,9 +18,8 @@ const Footer = () => {
     return (
         <footer>
             <div>
-                <h2>{t("homePage.footer.paragraph")}</h2> {/* Enclose the string in backticks */}
+                <h2>{t("homePage.footer.paragraph")}</h2>
             </div>
-            {/* Other footer content */}
             <div className="language-dropdown">
                 <select onChange={handleLanguageChange} value={i18n.language}>
                     <option value="en">English</option>

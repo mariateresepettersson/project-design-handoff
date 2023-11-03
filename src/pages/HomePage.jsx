@@ -1,4 +1,5 @@
 import Footer from "../components/Footer";
+import { Header } from "../components/Header";
 import SignupForm from "../components/SignUpForm";
 import { useTranslation } from "react-i18next";
 
@@ -8,10 +9,10 @@ export const Home = () => {
 
     return (
       <div>
+        <Header/>
         <h1>{t("homePage.mainSection.secondaryHeading")}</h1>
         <SignupForm />
         <Footer />
-        {/*  home page content */}
       </div>
     );
   };
