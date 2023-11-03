@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 const Hero = styled.header`
   position: relative;
 
@@ -13,6 +14,8 @@ const Hero = styled.header`
 export const Header = () => {
   return (
     <Hero>
+        <nav className="nav-menu">
+        </nav>
       <div className="hero-section">
         <video
           src="./assets/hero-movie.mp4"

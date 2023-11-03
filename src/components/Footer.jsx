@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import HoverCard from "./HoverCard"; // Add the file extension
 
 const Footer = () => {
     const { t, i18n } = useTranslation();
@@ -29,7 +28,6 @@ const Footer = () => {
                     <option value="pt">Portuguese</option>
                     <option value="mk">Macedonian</option>
                 </select>
-                <HoverCard />
             </div>
         </footer>
     );
